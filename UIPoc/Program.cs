@@ -36,7 +36,7 @@ namespace EnginePoc
                 }
                 else
                 {
-                    connection.On<string>("ReceiveMessage", (message) =>
+                    connection.On<string, string>("ReceiveMessage", (taskType, message) =>
                     {
                         Console.WriteLine(message);
                     });
